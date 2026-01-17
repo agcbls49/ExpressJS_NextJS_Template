@@ -3,8 +3,8 @@ This template is for using NextJS in the frontend and ExpressJS in the backend.
 
 **NOTE: NextJS code is in TypeScript (default configs) and ExpressJS is in JavaScript.**
 
-## Cloning to be used
-Install GitHub Desktop and create a folder to put this cloned project. In GitHub make sure that `C:\Users\YourUsername\Documents\Folder\` is selected as a directory and copy the url of this project. Once cloned, the folder will now have the following inside:
+## Use this Template
+Click `Use this template` button and select `Create a new repository` then modify needed details. Install GitHub Desktop and create a folder to put this cloned project. In GitHub make sure that `C:\Users\YourUsername\Documents\YourFolder\` is selected as a directory and copy the url of this project. Once cloned, the folder will now have the following inside:
 ```
 frontend
 backend
