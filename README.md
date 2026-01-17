@@ -20,6 +20,7 @@ cd backend/
 npm i express
 npm i nodemon -D
 npm install cors
+npm install prisma @prisma/client
 npm fund
 ```
 
@@ -30,6 +31,9 @@ npm init -y
 touch api.js
 npm i express
 npm i nodemon -D
+npm install prisma @prisma/client
+npx prisma init
+npx prisma generate
 ```
 
 Inside `backend/package.json` rename `"main": "index.js"` to `"main": "api.js"` and inside `"scripts":{` add 
