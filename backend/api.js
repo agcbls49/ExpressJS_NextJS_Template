@@ -3,9 +3,9 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-// Enable CORS for React app on port 5173
+// Enable CORS for Next JS
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: "http://localhost:3000"
 }));
 
 app.get("/api", (req, res) => {
@@ -13,6 +13,5 @@ app.get("/api", (req, res) => {
 });
 
 // Run this development server in port 
-app.listen(4000, () => {
-    console.log("Server started on port 4000");
-});
+const port = process.env.PORT || 4000;
+app.listen(port, () => console.log(`Server running on ${port}`));

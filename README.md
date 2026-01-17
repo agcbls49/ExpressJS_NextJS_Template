@@ -16,6 +16,10 @@ Install dependencies:
 cd frontend/
 npm install
 cd ..
+```
+
+Inside backend, if the `package.json` is missing then do `npm init -y` else do the following:
+```
 cd backend/
 npm i express
 npm i nodemon -D
