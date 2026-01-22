@@ -8,9 +8,9 @@ export async function UserList() {
 
     return (
         <ul>
-        {data.users.map((user: string, index: number) => (
-            <li key={index}>{user}</li>
-        ))}
+            {data.users.map((user: string, index: number) => (
+                <li key={index}>{user}</li>
+            ))}
         </ul>
     );
 }

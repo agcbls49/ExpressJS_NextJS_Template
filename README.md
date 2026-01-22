@@ -1,7 +1,7 @@
 # NextJS + ExpressJS Template
 This template is for using NextJS in the frontend and ExpressJS in the backend. 
 
-**NOTE: NextJS code is in TypeScript (default configs) and ExpressJS is in TypeScript. Package installs are listed sequentially for personal tracking but can be simplified using one line installs.**
+**NOTE: NextJS code and ExpressJS are both in TypeScript. Package installs are listed sequentially for personal tracking but can be simplified using one line installs.**
 
 ## Use this Template
 Click `Use this template` button and select `Create a new repository` then modify needed details. Install GitHub Desktop and create a folder to put this cloned project. In GitHub make sure that `C:\Users\YourUsername\Documents\YourFolder\` is selected as a directory and copy the url of this project. Once cloned, the folder will now have the following inside:
@@ -18,16 +18,15 @@ npm install
 cd ..
 ```
 
-Inside backend, if the `package.json` is missing then do `npm init -y` else do the following:
+Inside backend, if the `package.json` is missing then do `npm init -y` and install dependencies:
+
 ```
 cd backend/
-npm i express
-npm i nodemon -D
-npm install cors
-npm install prisma @prisma/client
+npm install
+cd ..
 ```
 
-or in one line do `npm install express nodemon -D cors prisma @prisma/client`.
+or in one line do `npm init -y && npm i express cors @prisma/client && npm i -D nodemon typescript tsx @types/express @types/cors @types/node prisma && npx prisma init && npx tsc --init`.
 
 ## (If not using the template) Setup
 These steps are what was done to create the template.
@@ -35,21 +34,21 @@ These steps are what was done to create the template.
 ```
 cd backend/
 npm init -y
-touch api.js
-npm i express
-npm i -D nodemon
-npm i -D typescript
-npm i -D @types/express
-npx tsx api.ts
-npm install prisma @prisma/client
+touch api.ts
+cd backend/
+npm init -y
+touch api.ts
+npm i express cors @prisma/client
+npm i -D typescript nodemon tsx prisma @types/node @types/express @types/cors
 npx prisma init
 npx prisma generate
+npx tsx api.ts
 ```
 
-Inside `backend/package.json` rename `"main": "index.js"` to `"main": "api.js"` and inside `"scripts":{` add 
+Inside `backend/package.json` rename `"main": "index.js"` to `"main": "api.ts"` and inside `"scripts":{` add 
 ```
-"start": "node api.js",
-"dev": "nodemon api.js" 
+"start": "node api.ts",
+"dev": "nodemon --exec npx tsx api.ts" 
 ```
 
 ```
