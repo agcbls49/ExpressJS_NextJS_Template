@@ -1,7 +1,7 @@
 # NextJS + ExpressJS Template
 This template is for using NextJS in the frontend and ExpressJS in the backend. 
 
-**NOTE: NextJS code is in TypeScript (default configs) and ExpressJS is in JavaScript. Package installs are listed sequentially for personal tracking but can be simplified using one line installs.**
+**NOTE: NextJS code is in TypeScript (default configs) and ExpressJS is in TypeScript. Package installs are listed sequentially for personal tracking but can be simplified using one line installs.**
 
 ## Use this Template
 Click `Use this template` button and select `Create a new repository` then modify needed details. Install GitHub Desktop and create a folder to put this cloned project. In GitHub make sure that `C:\Users\YourUsername\Documents\YourFolder\` is selected as a directory and copy the url of this project. Once cloned, the folder will now have the following inside:
@@ -37,7 +37,10 @@ cd backend/
 npm init -y
 touch api.js
 npm i express
-npm i nodemon -D
+npm i -D nodemon
+npm i -D typescript
+npm i -D @types/express
+npx tsx api.ts
 npm install prisma @prisma/client
 npx prisma init
 npx prisma generate
@@ -80,7 +83,7 @@ Inside `frontend/next.config.ts` below `/* config options here */` add
 
 For code, go to the following files and copy paste in desired project:
 ```
-backend/api.js
+backend/api.ts
 frontend/app/page.tsx
 frontend/app/components/UserList.tsx
 ```
